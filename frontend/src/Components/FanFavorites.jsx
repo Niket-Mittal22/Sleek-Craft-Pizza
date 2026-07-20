@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { client, urlFor } from '../sanityClient'
-import MenuCard from './MenuCard' // Reuse the component!
+import MenuCard from './MenuCard.jsx' // Reuse the component!
 import './FanFavorites.css'
 
 export default function FanFavorites() {

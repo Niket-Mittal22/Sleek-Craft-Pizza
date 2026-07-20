@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { client, urlFor } from '../sanityClient'
-import MenuCard from './MenuCard'
+import MenuCard from './MenuCard.jsx'
 import './MenuGrid.css'
 
 export default function MenuGrid() {

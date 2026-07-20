@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Menu, X, Phone, ShoppingBag } from 'lucide-react'
-import { useCart } from '../context/CartContext' // 1. Import the hook
+import { useCart } from '../context/CartContext.jsx' // 1. Import the hook
 import { Link } from 'react-router-dom' // Use Link for internal routing
 import './Navbar.css'
 

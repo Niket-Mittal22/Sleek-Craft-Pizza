@@ -1,4 +1,4 @@
-import MenuGrid from '../components/MenuGrid'
+import MenuGrid from '../components/MenuGrid.jsx'
 
 export default function MenuPage() {
   return (
