@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast' // 1. Import the Toaster
 import { CartProvider } from './context/CartContext.jsx'
-import Navbar from './components/Navbar.jsx'
-import Footer from './components/Footer.jsx'
+import Navbar from './Components/Navbar.jsx'
+import Footer from './Components/Footer.jsx'
 import Home from './pages/Home.jsx'
 import MenuPage from './pages/MenuPage.jsx'
 import StoryPage from './pages/StoryPage.jsx'

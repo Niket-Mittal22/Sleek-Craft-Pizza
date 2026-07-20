@@ -1,7 +1,7 @@
-import Hero from '../components/Hero.jsx'
-import FanFavorites from '../components/FanFavorites.jsx'
-import Reviews from '../components/Reviews.jsx'
-import ContactMap from '../components/ContactMap.jsx'
+import Hero from '../Components/Hero.jsx'
+import FanFavorites from '../Components/FanFavorites.jsx'
+import Reviews from '../Components/Reviews.jsx'
+import ContactMap from '../Components/ContactMap.jsx'
 
 export default function Home() {
   return (

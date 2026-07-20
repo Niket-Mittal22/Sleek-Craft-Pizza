@@ -1,5 +1,5 @@
 
-import ContactMap from '../components/ContactMap'
+import ContactMap from '../Components/ContactMap'
 
 export default function Contact() {
   return (
