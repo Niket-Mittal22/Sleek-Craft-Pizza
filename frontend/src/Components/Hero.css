@@ -1,0 +1,170 @@
+.hero-section {
+  padding: 4rem 1rem;
+  overflow: hidden;
+  background-color: #fffbf0; /* Very light, warm amber tint to match pizza vibes */
+}
+
+.hero-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Desktop Layout */
+@media (min-width: 1024px) {
+  .hero-container {
+    flex-direction: row;
+    padding: 2rem 0 4rem 0;
+  }
+}
+
+/* Text Content Left Side */
+.hero-text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-text-content {
+    align-items: flex-start;
+    text-align: left;
+    padding-right: 2rem;
+  }
+}
+
+.hero-badge {
+  display: inline-block;
+  background-color: #fef2f2;
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #fecaca;
+}
+
+.hero-title {
+  /* Using clamp() for fluid typography */
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: #1c1917;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.highlight-text {
+  color: #dc2626;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  color: #57534e;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 32rem;
+}
+
+/* CTA Buttons */
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .hero-buttons {
+    flex-direction: row;
+    width: auto;
+  }
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #dc2626;
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #b91c1c;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #44403c;
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  border: 2px solid #e7e5e4;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: #d6d3d1;
+  background-color: #f5f5f4;
+}
+
+/* Image Content Right Side */
+.hero-image-content {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  max-width: 32rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Subtle glowing background behind the pizza */
+.image-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: 110%;
+  background: radial-gradient(circle, rgba(253,186,116,0.4) 0%, rgba(255,255,255,0) 70%);
+  z-index: 0;
+  border-radius: 50%;
+}
+
+.hero-pizza-image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  border-radius: 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  animation: float 6s ease-in-out infinite; /* Dynamic floating effect */
+  transform-origin: center;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}

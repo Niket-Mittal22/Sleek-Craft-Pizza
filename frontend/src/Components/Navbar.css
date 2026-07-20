@@ -1,0 +1,232 @@
+/* Glassmorphism Header */
+.navbar-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #fef3c7;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.navbar-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .navbar-container {
+    padding: 0 1.5rem;
+  }
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+}
+
+/* Logo Styling */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.logo-emoji {
+  font-size: 1.875rem;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: #1c1917;
+  transition: color 0.2s ease;
+}
+
+.logo-text span {
+  color: #dc2626;
+}
+
+.navbar-logo:hover .logo-text {
+  color: #dc2626;
+}
+
+/* Desktop Links */
+.nav-links-desktop {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 500;
+  color: #44403c;
+}
+
+@media (min-width: 768px) {
+  .nav-links-desktop {
+    display: flex;
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #dc2626;
+}
+
+/* Actions Section */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Phone Button Responsive Trick */
+.phone-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #44403c;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.phone-btn:hover {
+  color: #dc2626;
+  background-color: #fef2f2;
+}
+
+.phone-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #dc2626;
+}
+
+/* Hide text on small/medium screens, show full number on large desktops */
+.phone-text {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .phone-text {
+    display: inline;
+  }
+}
+
+/* Order Button */
+.order-btn {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #dc2626;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.625rem 1.25rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px -1px rgba(220, 38, 38, 0.2);
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 640px) {
+  .order-btn {
+    display: flex;
+  }
+}
+
+.order-btn:hover {
+  background-color: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.btn-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Hamburger Toggle Button */
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: #44403c;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Mobile Dropdown Drawer */
+.mobile-drawer {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e7e5e4;
+  padding: 1rem 1rem 1.5rem 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .mobile-drawer {
+    display: none;
+  }
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.mobile-link {
+  text-decoration: none;
+  color: #292524;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-link:hover {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.mobile-actions {
+  padding-top: 1rem;
+  border-top: 1px solid #f5f5f4;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mobile-order-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #dc2626;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+}

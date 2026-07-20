@@ -1,0 +1,39 @@
+.favorites-section {
+  padding: 5rem 1rem;
+  background-color: #ffffff;
+}
+
+.favorites-container {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.favorites-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.favorites-subtitle {
+  color: #dc2626;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.favorites-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #1c1917;
+  letter-spacing: -0.02em;
+}
+
+/* Grid Layout matching the Menu page */
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}

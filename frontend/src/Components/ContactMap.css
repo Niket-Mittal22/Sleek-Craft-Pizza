@@ -1,0 +1,134 @@
+.contact-section {
+  padding: 5rem 1rem;
+  background-color: #ffffff;
+}
+
+.contact-container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.contact-subtitle {
+  color: #dc2626;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.contact-title {
+  font-size: clamp(2.5rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #1c1917;
+  letter-spacing: -0.02em;
+}
+
+/* Two Column Layout */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  background-color: #fafaf9; /* Very light stone background */
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 1px solid #e7e5e4;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 1024px) {
+  .contact-content {
+    grid-template-columns: 1fr 1fr; /* Splits 50/50 on desktop */
+  }
+}
+
+/* Left Side: Info Box */
+.contact-info-box {
+  padding: 2.5rem 2rem;
+}
+
+@media (min-width: 1024px) {
+  .contact-info-box {
+    padding: 4rem;
+  }
+}
+
+.info-group {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.info-icon-wrapper {
+  background-color: #fef2f2;
+  color: #dc2626;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Prevents the circle from squishing */
+}
+
+.info-text h3 {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #1c1917;
+  margin-bottom: 0.25rem;
+}
+
+.info-text p, .info-text ul {
+  color: #57534e;
+  line-height: 1.6;
+}
+
+/* Operating Hours List */
+.hours-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 300px;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px dashed #d6d3d1;
+}
+
+.hours-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Right Side: Map Container */
+.map-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .map-container {
+    height: 100%; /* Stretches to match the height of the left column */
+  }
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

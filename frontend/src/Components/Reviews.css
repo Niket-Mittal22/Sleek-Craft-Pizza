@@ -1,0 +1,142 @@
+.reviews-section {
+  padding: 5rem 0; /* No side padding so the scroll goes edge-to-edge */
+  background-color: #1c1917; /* Dark stone color */
+  color: #ffffff;
+  overflow: hidden; /* Hides the cards outside the screen */
+}
+
+.reviews-header {
+  text-align: center;
+  padding: 0 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.reviews-subtitle {
+  color: #fbbf24; /* Warm yellow/amber */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.reviews-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+/* The Marquee Container */
+.marquee-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+/* 
+  Fading edges so cards appear to fade in/out at the sides of the screen.
+  Creates a very polished, professional look.
+*/
+.marquee-container::before,
+.marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, #1c1917, transparent);
+}
+
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, #1c1917, transparent);
+}
+
+/* The Track that holds the cards */
+.marquee-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  /* Animates from 0 to -50% (since we duplicate the cards to make it infinite) */
+  animation: scroll-left 40s linear infinite;
+  padding: 1rem;
+}
+
+/* Pause the rolling effect when user hovers to read */
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* 
+      Move exactly half the width. 
+      The minus 0.75rem accounts for exactly half the gap between items.
+    */
+    transform: translateX(calc(-50% - 0.75rem));
+  }
+}
+
+/* Individual Review Card */
+.review-card {
+  width: 400px;
+  background-color: #292524;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid #44403c;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  white-space: normal; /* Allows text to wrap normally inside the flex row */
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  border-color: #dc2626; /* Red border on hover */
+}
+
+.stars-container {
+  display: flex;
+  gap: 0.25rem;
+  color: #fbbf24;
+  margin-bottom: 1rem;
+}
+
+.review-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d6d3d1;
+  flex-grow: 1;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.review-author {
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
