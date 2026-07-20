@@ -1,7 +1,11 @@
 import './StoryPage.css'
 import StoryPageImage from '../assets/storypage.jpg'
+import { useEffect } from 'react'
 
 export default function StoryPage() {
+  useEffect(() => {
+    document.title = "Our Story - Sleek Craft"
+  }, [])
   const branches = [
     {
       id: 1,
@@ -41,7 +45,7 @@ export default function StoryPage() {
       <article className="story-content">
         <h2>It Started with a Burnt Crust</h2>
         <p>
-          Back in 2018, Slice & Craft wasn't a restaurant—it was just a passionate obsession in a cramped backyard. Our founder spent months trying to replicate the authentic, airy, blistered crusts of Naples. 
+          Back in 2018, Sleek & Craft wasn't a restaurant—it was just a passionate obsession in a cramped backyard. Our founder spent months trying to replicate the authentic, airy, blistered crusts of Naples. 
         </p>
         <p>
           There were a lot of mistakes. Hundreds of burnt crusts, collapsed doughs, and smoke alarms. But then, on a rainy Tuesday evening, the perfect dough was pulled from the homemade wood-fired oven. It was crispy on the outside, incredibly chewy on the inside, and tasted like magic.

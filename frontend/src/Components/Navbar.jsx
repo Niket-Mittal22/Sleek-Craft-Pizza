@@ -18,7 +18,7 @@ export default function Navbar() {
           <Link to="/" className="navbar-logo">
             <span className="logo-emoji">🍕</span>
             <span className="logo-text">
-              Slice<span>&</span>Craft
+              Sleek<span>&</span>Craft
             </span>
           </Link>
 
@@ -26,7 +26,7 @@ export default function Navbar() {
             <Link to="/" className="nav-link">Home</Link>
             <Link to="/menu" className="nav-link">Menu</Link>
             <Link to="/about" className="nav-link">Our Story</Link>
-            <a href="#contact" className="nav-link">Contact</a>
+            <Link to="/contact" className="nav-link">Contact</Link>
           </nav>
 
           <div className="navbar-actions">

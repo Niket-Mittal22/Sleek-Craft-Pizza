@@ -2,8 +2,12 @@ import { Link } from 'react-router-dom'
 import { Minus, Plus, Trash2 } from 'lucide-react'
 import { useCart } from '../context/CartContext.jsx'
 import './CartPage.css'
+import { useEffect } from 'react'
 
 export default function CartPage() {
+  useEffect(() => {
+    document.title = "Cart - Sleek Craft"
+  }, [])
   const { cartItems, updateQuantity, removeFromCart, cartTotal } = useCart()
 
   // Calculate some mock taxes and fees for realism

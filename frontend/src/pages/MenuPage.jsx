@@ -1,6 +1,10 @@
 import MenuGrid from '../Components/MenuGrid.jsx'
+import { useEffect } from 'react'
 
 export default function MenuPage() {
+  useEffect(() => {
+    document.title = "Menu - Sleek Craft"
+  }, [])
   return (
     <main className="bg-stone-50 min-h-screen pt-10">
       <div className="text-center mb-8">
