@@ -1,19 +1,18 @@
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 export default function ScrollToTop() {
-  // useLocation gives us the current URL pathname (e.g., '/menu' or '/cart')
-  const { pathname } = useLocation();
+  const { pathname } = useLocation()
 
   useEffect(() => {
-    // Every time the pathname changes, instantly scroll to the top left (0, 0)
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
+    // Wait 50 milliseconds for the new page to render, THEN scroll
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }, 50)
+  }, [pathname])
 
-  }, [pathname]);
-
-  // This component doesn't render any HTML, it just runs the logic above
-  return null;
+  return null
 }
