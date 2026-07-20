@@ -7,7 +7,11 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     // Every time the pathname changes, instantly scroll to the top left (0, 0)
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+
   }, [pathname]);
 
   // This component doesn't render any HTML, it just runs the logic above
