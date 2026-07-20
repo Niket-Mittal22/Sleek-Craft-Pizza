@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast' // 1. Import the Toaster
-import { CartProvider } from './context/CartContext'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import MenuPage from './pages/MenuPage'
-import StoryPage from './pages/StoryPage'
-import Contact from './pages/Contact'
-import CartPage from './pages/CartPage'
+import { CartProvider } from './context/CartContext.jsx'
+import Navbar from './components/Navbar.jsx'
+import Footer from './components/Footer.jsx'
+import Home from './pages/Home.jsx'
+import MenuPage from './pages/MenuPage.jsx'
+import StoryPage from './pages/StoryPage.jsx'
+import Contact from './pages/Contact.jsx'
+import CartPage from './pages/CartPage.jsx'
 
 export default function App() {
   return (
