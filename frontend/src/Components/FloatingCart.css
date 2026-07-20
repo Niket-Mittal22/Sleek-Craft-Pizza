@@ -1,0 +1,56 @@
+.floating-cart-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 50; /* Keeps it above everything else */
+}
+
+.floating-cart-btn {
+  background-color: #dc2626;
+  color: #ffffff;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.4);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.floating-cart-btn:hover {
+  background-color: #b91c1c;
+  transform: scale(1.05);
+}
+
+.floating-cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: #1c1917; /* Dark stone color */
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 800;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+}
+
+/* Adjust for smaller mobile screens */
+@media (max-width: 640px) {
+  .floating-cart-container {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  
+  .floating-cart-btn {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}

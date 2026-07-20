@@ -58,11 +58,14 @@ export default function Navbar() {
       {/* Mobile Drawer (Truncated for brevity, just update the Cart button here too) */}
       {isOpen && (
         <div className="mobile-drawer">
-          <nav className="mobile-nav-links">
-             {/* ... your mobile links ... */}
+          <nav className="mobile-nav-links" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', padding: '1rem' }}>
+            <Link to="/" onClick={() => setIsOpen(false)} className="nav-link">Home</Link>
+            <Link to="/menu" onClick={() => setIsOpen(false)} className="nav-link">Menu</Link>
+            <Link to="/about" onClick={() => setIsOpen(false)} className="nav-link">Our Story</Link>
           </nav>
-          <div className="mobile-actions">
-            <Link to="/cart" onClick={() => setIsOpen(false)} className="mobile-order-btn">
+          
+          <div className="mobile-actions" style={{ padding: '1rem', borderTop: '1px solid #e7e5e4' }}>
+            <Link to="/cart" onClick={() => setIsOpen(false)} className="mobile-order-btn" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <ShoppingBag size={20} />
               <span>Cart ({totalItems})</span>
             </Link>

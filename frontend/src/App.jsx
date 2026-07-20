@@ -8,6 +8,7 @@ import MenuPage from './pages/MenuPage.jsx'
 import StoryPage from './pages/StoryPage.jsx'
 import Contact from './pages/Contact.jsx'
 import CartPage from './pages/CartPage.jsx'
+import FloatingCart from './Components/FloatingCart.jsx'
 
 export default function App() {
   return (
@@ -38,6 +39,7 @@ export default function App() {
         </Routes>
         
         <Footer />
+        <FloatingCart />
       </div>
     </BrowserRouter>
     </CartProvider>
