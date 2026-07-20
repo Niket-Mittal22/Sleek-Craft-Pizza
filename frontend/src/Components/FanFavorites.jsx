@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { client, urlFor } from '../sanityClient'
+import { client, urlFor } from '../sanityClient.js'
 import MenuCard from './MenuCard.jsx' // Reuse the component!
 import './FanFavorites.css'
 
