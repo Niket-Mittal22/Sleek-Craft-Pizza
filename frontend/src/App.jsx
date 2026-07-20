@@ -9,11 +9,13 @@ import StoryPage from './pages/StoryPage.jsx'
 import Contact from './pages/Contact.jsx'
 import CartPage from './pages/CartPage.jsx'
 import FloatingCart from './Components/FloatingCart.jsx'
+import ScrollToTop from './Components/ScrollToTop.jsx'
 
 export default function App() {
   return (
     <CartProvider>
     <BrowserRouter>
+      <ScrollToTop />
       <div className="min-h-screen font-sans">
         
         {/* 2. Place Toaster here. It stays hidden until triggered! */} 
